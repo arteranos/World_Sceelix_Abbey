@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: d75aa986e0372ae419e98ea36b939544
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: Material_0__Granite_png
+  - first:
+      21: 2100002
+    second: Material_1__StainedGlass_Albedo_png
+  - first:
+      21: 2100004
+    second: Material_2__Wood_png
+  - first:
+      21: 2100006
+    second: Material_3__ColorMaterial_206_183_120_png
+  - first:
+      21: 2100008
+    second: Material_4__Granite_Tiling_Albedo_png
+  - first:
+      21: 2100010
+    second: Material_5__Marble_png
+  - first:
+      21: 2100012
+    second: Material_0_001__Granite_png_001
+  - first:
+      21: 2100014
+    second: Material_1_001__Marble_png_001
+  - first:
+      21: 2100016
+    second: Material_2_001__Wood_png_001
+  - first:
+      21: 2100018
+    second: Material_3_001__ColorMaterial_206_183_120_png_001
+  - first:
+      21: 2100020
+    second: Material_4_001__ColorMaterial_0_127_255_png
+  - first:
+      21: 2100022
+    second: Material_5_001__ColorMaterial_96_96_96_png
+  - first:
+      21: 2100024
+    second: Material_6__Granite_Tiling_Albedo_png_001
+  - first:
+      21: 2100026
+    second: Material_7__StainedGlass_Albedo_png_001
+  - first:
+      21: 2100028
+    second: Material_0__Granite_png_001
+  - first:
+      21: 2100030
+    second: Material_1__Marble_png_001
+  - first:
+      21: 2100032
+    second: Material_2__Wood_png_001
+  - first:
+      21: 2100034
+    second: Material_3__ColorMaterial_206_183_120_png_001
+  - first:
+      21: 2100036
+    second: Material_4__ColorMaterial_0_127_255_png
+  - first:
+      21: 2100038
+    second: Material_5__ColorMaterial_96_96_96_png
+  - first:
+      21: 2100040
+    second: Material_0__Granite_png_002
+  - first:
+      21: 2100042
+    second: Material_1__Marble_png_002
+  - first:
+      21: 2100044
+    second: Material_2__Wood_png_002
+  - first:
+      21: 2100046
+    second: Material_3__ColorMaterial_206_183_120_png_002
+  - first:
+      21: 2100048
+    second: Material_4__ColorMaterial_0_127_255_png_001
+  - first:
+      21: 2100050
+    second: Material_5__ColorMaterial_96_96_96_png_001
+  - first:
+      21: 2100052
+    second: Material_6__Granite_Tiling_Albedo_png_002
+  - first:
+      21: 2100054
+    second: Material_7__StainedGlass_Albedo_png_002
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: Group
+  - first:
+      43: 4300002
+    second: Group_001
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0
+    second: {fileID: 2100000, guid: f61e3f4f96d99a940971a889a1811cfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0__Granite_png
+    second: {fileID: 2100000, guid: 8fb4dad068b64e642b9790de1a1bfe2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0__Granite_png_001
+    second: {fileID: 2100000, guid: f61e3f4f96d99a940971a889a1811cfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0__Granite_png_002
+    second: {fileID: 2100000, guid: f61e3f4f96d99a940971a889a1811cfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_1
+    second: {fileID: 2100000, guid: 115adae58e37eba4bb5db97f8230eaf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_1__Marble_png_001
+    second: {fileID: 2100000, guid: 115adae58e37eba4bb5db97f8230eaf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_1__Marble_png_002
+    second: {fileID: 2100000, guid: 115adae58e37eba4bb5db97f8230eaf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_1__StainedGlass_Albedo_png
+    second: {fileID: 2100000, guid: 1fdabe4f2a520774faf2607d3dfc136e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2
+    second: {fileID: 2100000, guid: 9182022a9d3e94a4fa92c8273c9fb5c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2__Wood_png
+    second: {fileID: 2100000, guid: f3f5532c47a425a4b813d6ed73267953, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2__Wood_png_001
+    second: {fileID: 2100000, guid: 9182022a9d3e94a4fa92c8273c9fb5c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2__Wood_png_002
+    second: {fileID: 2100000, guid: 9182022a9d3e94a4fa92c8273c9fb5c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_3
+    second: {fileID: 2100000, guid: 67b71779a28b2fa468027e40aa56646a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_3__ColorMaterial_206_183_120_png
+    second: {fileID: 2100000, guid: b6887d6ce6586a44a935d01ca64c358b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_3__ColorMaterial_206_183_120_png_001
+    second: {fileID: 2100000, guid: 67b71779a28b2fa468027e40aa56646a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_3__ColorMaterial_206_183_120_png_002
+    second: {fileID: 2100000, guid: 67b71779a28b2fa468027e40aa56646a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_4
+    second: {fileID: 2100000, guid: c12d301d2dafdc24b93ad82316c005e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_4__ColorMaterial_0_127_255_png
+    second: {fileID: 2100000, guid: c12d301d2dafdc24b93ad82316c005e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_4__ColorMaterial_0_127_255_png_001
+    second: {fileID: 2100000, guid: c12d301d2dafdc24b93ad82316c005e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_4__Granite_Tiling_Albedo_png
+    second: {fileID: 2100000, guid: 0677a0d430beced4a9ab49b39571656e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_5
+    second: {fileID: 2100000, guid: 0847fdf21a1118141ab69910baedd11e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_5__ColorMaterial_96_96_96_png
+    second: {fileID: 2100000, guid: 0847fdf21a1118141ab69910baedd11e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_5__ColorMaterial_96_96_96_png_001
+    second: {fileID: 2100000, guid: 0847fdf21a1118141ab69910baedd11e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_5__Marble_png
+    second: {fileID: 2100000, guid: 97827457a439f7a4491b6eb27236bacb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_6
+    second: {fileID: 2100000, guid: c2c55bb0a18ae7f478c98d621712397f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_6__Granite_Tiling_Albedo_png_001
+    second: {fileID: 2100000, guid: c2c55bb0a18ae7f478c98d621712397f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_6__Granite_Tiling_Albedo_png_002
+    second: {fileID: 2100000, guid: c2c55bb0a18ae7f478c98d621712397f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_7
+    second: {fileID: 2100000, guid: 1fdabe4f2a520774faf2607d3dfc136e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_7__StainedGlass_Albedo_png_001
+    second: {fileID: 2100000, guid: 1fdabe4f2a520774faf2607d3dfc136e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_7__StainedGlass_Albedo_png_002
+    second: {fileID: 2100000, guid: 1fdabe4f2a520774faf2607d3dfc136e, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
