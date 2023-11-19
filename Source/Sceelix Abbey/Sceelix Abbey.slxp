@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Project>
+  <Author>carsten</Author>
+  <Company>Private</Company>
+  <Version>1.0.0.0</Version>
+  <Items>
+    <Item Path="Graphs" Nature="Folder" Expanded="True">
+      <Item Path="BasicArch.slxg" Nature="File" Guid="5adbf04a-26df-4de0-b3de-b71df91de323" />
+      <Item Path="Insert_Hole.slxg" Nature="File" Guid="5a6ed8d6-a34b-4b79-a2bb-2f02aa5e0c7c" />
+      <Item Path="Main.MainAisle_UpperWindows.slxg" Nature="File" Guid="09c1a239-d2ec-4d54-b69b-b81dc2955e80" />
+      <Item Path="Main.Pillars.slxg" Nature="File" Guid="5b43dae8-a7ba-4553-b8a5-bc233ba69895" />
+      <Item Path="Main.Roof.slxg" Nature="File" Guid="75af3725-5666-4fa8-bbed-21073d0b7ceb" />
+      <Item Path="Main.SideAisle.slxg" Nature="File" Guid="f7767268-faa2-4366-85d0-a1e27068db11" />
+      <Item Path="Main.SideAisle_Wall.slxg" Nature="File" Guid="e018e7e9-0fc5-4023-a29f-39c0b9abe76b" />
+      <Item Path="Main.slxg" Nature="File" Guid="c9794a34-e761-4122-837b-db47cd46a1f1" />
+      <Item Path="Main.WallPanels.slxg" Nature="File" Guid="9a0bfafa-63c3-4361-b45f-9b2eb606e1c5" />
+      <Item Path="Pillar.slxg" Nature="File" Guid="1557d44b-40eb-4e76-a07d-54397204acfa" />
+      <Item Path="Place_Fenceposts.slxg" Nature="File" Guid="81588cee-5b4b-48a7-b449-5f4ab23c215f" />
+      <Item Path="Sconce.slxg" Nature="File" Guid="4b3b87ae-1120-4861-a66b-fdccc993d5d8" />
+      <Item Path="Scroll_Case_Inner.slxg" Nature="File" Guid="324f7b30-024f-4a77-9ccb-66013673ac40" />
+      <Item Path="Scroll_Line.slxg" Nature="File" Guid="164aa82f-d9be-4839-9e55-eaa70d533e7a" />
+      <Item Path="Scroll_Pile.slxg" Nature="File" Guid="c2296583-5f24-49fa-aba1-c5f3f1eb9b00" />
+      <Item Path="SimplifyMesh.slxg" Nature="File" Guid="6bb5bef4-0762-4a61-8df7-ce30f6f75856" />
+      <Item Path="WallPanel_Complete.slxg" Nature="File" Guid="c9e77385-a12c-4b61-8fdf-3af0e0d4a367" />
+      <Item Path="WallPanel_Lower.Conditional.slxg" Nature="File" Guid="092a7c0c-3cbc-485b-9a65-55680ec9fd74" />
+      <Item Path="WallPanel_Lower.slxg" Nature="File" Guid="b83406be-7d81-4e2f-971d-a34ee8af0b63" />
+      <Item Path="WallPanel_Upper.slxg" Nature="File" Guid="0d9e8258-2954-4c6f-9b27-393e084b9d9b" />
+    </Item>
+    <Item Path="Textures" Nature="Folder" Expanded="False">
+      <Item Path="Granite.png" Nature="File" Guid="fa215690-4d4c-4c80-b889-4b45d9059ba2" />
+      <Item Path="Granite_Tiling_Albedo.png" Nature="File" Guid="b1daf782-c8d7-467d-97fe-c266f5503f13" />
+      <Item Path="Granite_Tiling_Normal.png" Nature="File" Guid="91594930-694e-4dab-b56b-003173c01f2f" />
+      <Item Path="Grid.png" Nature="File" Guid="271dedf9-4b18-4821-9c5c-979003b180f9" />
+      <Item Path="HammeredIron_Normal.png" Nature="File" Guid="18e3b2f9-c072-4c77-ba08-cdcaf3b2d93a" />
+      <Item Path="Marble.png" Nature="File" Guid="b3c82d86-87a8-4adc-8f7e-c133353454d0" />
+      <Item Path="StainedGlass_Albedo.png" Nature="File" Guid="25009ae6-8859-4795-8bc4-05bf19d3aa1d" />
+      <Item Path="StainedGlass_Normal.png" Nature="File" Guid="5ae3e93f-c689-4fbe-9dfe-cb7137b081f0" />
+      <Item Path="Wood.png" Nature="File" Guid="ff4a4885-ca9d-41f7-84f8-725278eef9a6" />
+    </Item>
+  </Items>
+</Project>

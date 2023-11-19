@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Graph Guid="1557d44b-40eb-4e76-a07d-54397204acfa" Author="carsten" Description="Create a single pillar, aligned along the X axis.&#xA;" Color="ffffff" Version="0.8.7.0">
+	<Parameters>
+		<Parameter Increment="0.1" Label="Height" Type="Sceelix.Core.Parameters.Infos.DoubleParameterInfo, Sceelix.Core, Version=0.8.7.0, Culture=neutral, PublicKeyToken=null" Section="" FixedValue="9" />
+	</Parameters>
+	<Nodes>
+		<Node Guid="41db4d5c-cb9f-43d0-a9f9-1c478521cf6d" NodeType="SystemNode" NodeTypeGUID="ab33c263-352e-4917-a7ec-0686aebc078b" Position="-893.9501 1713.196" DisableInSubgraphs="True" ProcedureType="MeshMaterialProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Material">
+					<Items>
+						<Item Expanded="True" Label="Texture">
+							<Fields>
+								<Field FixedValue="Textures/Marble.png" Label="Texture" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Color">
+							<Fields>
+								<Field FixedValue="255,0,0,255" Label="Color" />
+								<Field FixedValue="1" Label="Specular Power" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="61c9d76f-27b9-425b-912a-dc87162111ec" NodeType="SystemNode" NodeTypeGUID="9470e48f-5ee8-4d84-a371-949f27786f0f" Position="-893.6352 1859.551" DisableInSubgraphs="True" ProcedureType="MeshUVMapProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Cylinder UV">
+							<Fields>
+								<Field Expanded="True" Label="U">
+									<Fields>
+										<Field FixedValue="2" Label="Size" />
+										<Field FixedValue="False" Label="Absolute" />
+									</Fields>
+								</Field>
+								<Field Expanded="True" Label="V">
+									<Fields>
+										<Field FixedValue="8" Label="Size" />
+										<Field FixedValue="False" Label="Absolute" />
+									</Fields>
+								</Field>
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Face UV">
+							<Fields>
+								<Field Expanded="True" Label="U">
+									<Fields>
+										<Field FixedValue="1" Label="Size" />
+										<Field FixedValue="True" Label="Absolute" />
+									</Fields>
+								</Field>
+								<Field Expanded="True" Label="V">
+									<Fields>
+										<Field FixedValue="1" Label="Size" />
+										<Field FixedValue="True" Label="Absolute" />
+									</Fields>
+								</Field>
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="99a0eedd-eb30-4675-aad8-a44137d9e7de" NodeType="SystemNode" NodeTypeGUID="74716153-9685-4a42-8409-a9c79de5f8c4" Position="-885.7359 1560.647" ProcedureType="MeshCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Primitive">
+					<Items>
+						<Item Expanded="True" Label="Cylinder">
+							<Fields>
+								<Field FixedValue="0" Label="Height" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="Height" Type="ParameterExpressionNode" />
+									</ParsedExpression>
+								</Field>
+								<Field FixedValue="0.25" Label="Radius" />
+								<Field FixedValue="10" Label="Segments" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Cube">
+							<Fields>
+								<Field FixedValue="1" Label="Size" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="0cc9eb12-8f74-4cbd-afe0-a79fa3231e30" NodeType="SystemNode" NodeTypeGUID="75cdfc0b-7cdd-485a-85d2-8a781b3a79bc" Position="-889.2563 1994.824" DisableInSubgraphs="True" ProcedureType="MeshModifyProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Manipulate Normals">
+							<Fields>
+								<Field FixedValue="Smooth" Label="Type" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Extrude">
+							<Fields>
+								<Field FixedValue="1" Label="Amount" />
+								<Field Expanded="True" Label="Method">
+									<Items>
+										<Item Expanded="True" Label="Normal">
+											<Fields>
+												<Field FixedValue="0" Label="Offset" />
+											</Fields>
+										</Item>
+									</Items>
+								</Field>
+								<Field FixedValue="False" Label="Cap" />
+								<Field FixedValue="" Label="Section" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="07a63f6e-a334-485f-8bd8-713cbe8b4cdf" NodeType="SystemNode" NodeTypeGUID="8906cb79-297a-40a5-8e36-b5f12ddbb847" Position="-884.5625 2120.384" DisableInSubgraphs="True" ProcedureType="ActorRotateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Rotate">
+							<Fields>
+								<Field FixedValue="90" Label="Angle" />
+								<Field Expanded="True" Label="Axis">
+									<Fields>
+										<Field FixedValue="0,1,0" Label="Direction" />
+										<Field FixedValue="Scope" Label="Relative To" />
+									</Fields>
+								</Field>
+								<Field Expanded="False" Label="Pivot">
+									<Fields>
+										<Field FixedValue="0.5,0.5,0.5" Label="Position" />
+										<Field FixedValue="Relative" Label="Offset" />
+										<Field FixedValue="Scope" Label="Relative To" />
+									</Fields>
+								</Field>
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="2125be67-b812-4313-910c-1a33856fc909" NodeType="SystemNode" NodeTypeGUID="a7a6544e-abff-44fe-9156-975fe0608718" Position="-877.5178 2270.94" DisableInSubgraphs="True" ProcedureType="ActorScopeProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Reset Scope">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Output" />
+			</OutputPorts>
+		</Node>
+	</Nodes>
+	<Edges>
+		<Edge FromPort="0#O#0" ToPort="1#I#0" FromNode="0" ToNode="1" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="2#O#0" ToPort="0#I#0" FromNode="2" ToNode="0" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="1#O#0" ToPort="3#I#0" FromNode="1" ToNode="3" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="3#O#0" ToPort="4#I#0" FromNode="3" ToNode="4" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="4#O#0" ToPort="5#I#0" FromNode="4" ToNode="5" FromLabel="Output" ToLabel="Input" />
+	</Edges>
+</Graph>

@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Graph Guid="0d9e8258-2954-4c6f-9b27-393e084b9d9b" Author="carsten" Description="A standard graph procedure." Color="ffffff" Version="0.8.7.0">
+	<Parameters />
+	<Nodes>
+		<Node Guid="4a9cef75-1542-4a52-8dfa-6a5ed1358f4a" NodeType="ComponentNode" NodeTypeGUID="5adbf04a-26df-4de0-b3de-b71df91de323" Position="727.6517 346.3158" RelativePath="Graphs/BasicArch.slxg">
+			<Arguments>
+				<Argument FixedValue="3" Label="Radius" />
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="cc95a2f0-7bad-4f0d-9f62-14c18f71d46e" NodeType="SystemNode" NodeTypeGUID="930eb356-619d-4db7-b68a-016d9a6d1e97" Position="699.6064 480.1592" DisableInSubgraphs="True" ProcedureType="ActorTranslateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Translate">
+							<Fields>
+								<Field FixedValue="0,1,0" Label="Amount" />
+								<Field FixedValue="Scope" Label="Relative To" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="04ddf6cd-6ed1-4880-88e1-b0e88dfa0654" NodeType="SystemNode" NodeTypeGUID="74716153-9685-4a42-8409-a9c79de5f8c4" Position="430.1507 688.9738" HasImpulsePort="True" ProcedureType="MeshCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Primitive">
+					<Items>
+						<Item Expanded="True" Label="Rectangle">
+							<Fields>
+								<Field FixedValue="3" Label="Width" />
+								<Field FixedValue="4" Label="Height" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Cube">
+							<Fields>
+								<Field FixedValue="1" Label="Size" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Impulse Port 1" />
+			</InputPorts>
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="21deec95-d07f-4344-8ce9-24ce08fc7487" NodeType="SystemNode" NodeTypeGUID="bda91758-2aea-4aad-a607-cc4e76adbeae" Position="703.8082 747.4333" DisableInSubgraphs="True" ProcedureType="ActorScaleProcedure">
+			<Arguments>
+				<Argument FixedValue="0.7,1.4,1" Label="Amount" />
+				<Argument FixedValue="Relative" Label="Mode" />
+				<Argument FixedValue="Scope" Label="Relative To" />
+				<Argument Expanded="True" Label="Pivot">
+					<Fields>
+						<Field FixedValue="0.5,0.5,0.5" Label="Position" />
+						<Field FixedValue="Relative" Label="Offset" />
+						<Field FixedValue="Scope" Label="Relative To" />
+					</Fields>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="261aedcb-281f-4093-af16-ca7262ef52f2" NodeType="SystemNode" NodeTypeGUID="930eb356-619d-4db7-b68a-016d9a6d1e97" Position="416.8238 820.6003" DisableInSubgraphs="True" ProcedureType="ActorTranslateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Translate">
+							<Fields>
+								<Field FixedValue="0,2.25,0" Label="Amount" />
+								<Field FixedValue="Scope" Label="Relative To" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="ca33a101-7f9e-426e-9284-1d756ce40a7c" NodeType="SystemNode" NodeTypeGUID="75cdfc0b-7cdd-485a-85d2-8a781b3a79bc" Position="903.3314 896.6033" DisableInSubgraphs="True" ProcedureType="MeshModifyProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Extrude">
+							<Fields>
+								<Field FixedValue="-0.3" Label="Amount" />
+								<Field Expanded="True" Label="Method">
+									<Items>
+										<Item Expanded="True" Label="Normal">
+											<Fields>
+												<Field FixedValue="0" Label="Offset" />
+											</Fields>
+										</Item>
+									</Items>
+								</Field>
+								<Field FixedValue="False" Label="Cap" />
+								<Field FixedValue="" Label="Section" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="46cabc58-c0df-415e-8fc5-da3eddf76294" NodeType="SystemNode" NodeTypeGUID="930eb356-619d-4db7-b68a-016d9a6d1e97" Position="515.239 1452.837" DisableInSubgraphs="True" ProcedureType="ActorTranslateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Translate">
+							<Fields>
+								<Field FixedValue="0,0,1" Label="Amount" />
+								<Field FixedValue="Scope" Label="Relative To" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="26499743-704e-43c0-97f7-b4a8deba2877" NodeType="ComponentNode" NodeTypeGUID="6bb5bef4-0762-4a61-8df7-ce30f6f75856" Position="699.8579 606.8875" DisableInSubgraphs="True" RelativePath="Graphs/SimplifyMesh.slxg">
+			<Arguments />
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="bf7645d2-b2cb-418f-b994-07dee1bd1157" NodeType="SystemNode" NodeTypeGUID="ab33c263-352e-4917-a7ec-0686aebc078b" Position="515.6208 1192.917" DisableInSubgraphs="True" ProcedureType="MeshMaterialProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Material">
+					<Items>
+						<Item Expanded="True" Label="Texture">
+							<Fields>
+								<Field FixedValue="Textures/Granite.png" Label="Texture" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Color">
+							<Fields>
+								<Field FixedValue="255,0,0,255" Label="Color" />
+								<Field FixedValue="1" Label="Specular Power" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="98931d9c-1f9b-448e-bf08-ce097cbca978" NodeType="SystemNode" NodeTypeGUID="ab33c263-352e-4917-a7ec-0686aebc078b" Position="789.8458 1152.968" DisableInSubgraphs="True" ProcedureType="MeshMaterialProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Material">
+					<Items>
+						<Item Expanded="True" Label="Texture">
+							<Fields>
+								<Field FixedValue="Textures/Granite.png" Label="Texture" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Color">
+							<Fields>
+								<Field FixedValue="255,0,0,255" Label="Color" />
+								<Field FixedValue="1" Label="Specular Power" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="f5623728-c386-40e3-a467-9783fd0ec625" NodeType="SystemNode" NodeTypeGUID="9470e48f-5ee8-4d84-a371-949f27786f0f" Position="525.1989 1341.549" DisableInSubgraphs="True" ProcedureType="MeshUVMapProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Face UV">
+							<Fields>
+								<Field Expanded="True" Label="U">
+									<Fields>
+										<Field FixedValue="4" Label="Size" />
+										<Field FixedValue="False" Label="Absolute" />
+									</Fields>
+								</Field>
+								<Field Expanded="True" Label="V">
+									<Fields>
+										<Field FixedValue="4" Label="Size" />
+										<Field FixedValue="False" Label="Absolute" />
+									</Fields>
+								</Field>
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="b76a9797-147d-47e7-b347-f6ce27a6a78e" NodeType="SystemNode" NodeTypeGUID="266f147e-064f-44dc-8a38-5c9b7dacca74" Position="546.0547 1584.673" DisableInSubgraphs="True" ProcedureType="MeshMergeProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Input">
+					<Items>
+						<Item Expanded="True" Label="Collective">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Criteria">
+					<Items />
+				</Argument>
+				<Argument FixedValue="First" Label="Scope Selection" />
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="0a303bb4-dc27-47d9-902f-e76b1a3ad574" NodeType="SystemNode" NodeTypeGUID="2ef7c2e5-c59f-464b-8557-c1e4e38216a9" Position="433.4837 528.5257" DisableInSubgraphs="True" ProcedureType="EntityCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Method">
+					<Items>
+						<Item Expanded="True" Label="Standard">
+							<Fields>
+								<Field FixedValue="1" Label="Count" />
+								<Field FixedValue="" Label="Index" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="d91f5ab9-785e-424e-801e-d24c9121545a" NodeType="SystemNode" NodeTypeGUID="827e1ac6-ff43-4c26-b6d0-4e64b0c26d46" Position="851.8802 1028.795" DisableInSubgraphs="True" ProcedureType="MeshSubselectProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Mesh Selection">
+					<Items>
+						<Item Expanded="True" Label="Direction">
+							<Fields>
+								<Field Expanded="True" Label="Vector">
+									<Items>
+										<Item Expanded="True" Label="Side">
+											<Fields />
+										</Item>
+										<Item Expanded="True" Label="Horizontal">
+											<Fields />
+										</Item>
+										<Item Expanded="True" Label="Vertical">
+											<Fields />
+										</Item>
+										<Item Expanded="True" Label="Back">
+											<Fields />
+										</Item>
+									</Items>
+								</Field>
+								<Field FixedValue="45" Label="Angle Tolerance" />
+								<Field FixedValue="Scope" Label="Relative To" />
+								<Field Expanded="True" Label="Separate">
+									<Items />
+								</Field>
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Direction">
+							<Fields>
+								<Field Expanded="True" Label="Vector">
+									<Items>
+										<Item Expanded="True" Label="Vertical">
+											<Fields />
+										</Item>
+										<Item Expanded="True" Label="Back">
+											<Fields />
+										</Item>
+									</Items>
+								</Field>
+								<Field FixedValue="45" Label="Angle Tolerance" />
+								<Field FixedValue="Scope" Label="Relative To" />
+								<Field Expanded="True" Label="Separate">
+									<Items />
+								</Field>
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="2" />
+		</Node>
+		<Node Guid="8f10e2bb-a224-4fbf-a9d7-4f030f3497b6" NodeType="SystemNode" NodeTypeGUID="ab33c263-352e-4917-a7ec-0686aebc078b" Position="1053.372 1162.813" DisableInSubgraphs="True" ProcedureType="MeshMaterialProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Material">
+					<Items>
+						<Item Expanded="True" Label="Texture">
+							<Fields>
+								<Field FixedValue="Textures/StainedGlass_Albedo.png" Label="Texture" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Color">
+							<Fields>
+								<Field FixedValue="255,0,0,255" Label="Color" />
+								<Field FixedValue="1" Label="Specular Power" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="c406a642-ad96-44d8-bfc3-ced0c6d00242" NodeType="SystemNode" NodeTypeGUID="a66e6c1f-3448-4813-a959-6c4fb3d01ea7" Position="556.7115 1718.852" DisableInSubgraphs="True" ProcedureType="MeshUnifyProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operations">
+					<Items>
+						<Item Expanded="True" Label="Unify Vertices">
+							<Fields>
+								<Field FixedValue="0.01" Label="Tolerance" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Output" />
+			</OutputPorts>
+		</Node>
+		<Node Guid="d52ef757-5116-4aa7-9ca3-e7267fcce57d" NodeType="ComponentNode" NodeTypeGUID="5a6ed8d6-a34b-4b79-a2bb-2f02aa5e0c7c" Position="538.3328 1027.156" DisableInSubgraphs="True" RelativePath="Graphs/Insert_Hole.slxg">
+			<Arguments />
+			<InputPorts Count="2" />
+			<OutputPorts Count="1" />
+		</Node>
+	</Nodes>
+	<Edges>
+		<Edge FromPort="0#O#0" ToPort="1#I#0" FromNode="0" ToNode="1" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="2#O#0" ToPort="4#I#0" FromNode="2" ToNode="4" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="3#O#0" ToPort="5#I#0" FromNode="3" ToNode="5" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="1#O#0" ToPort="7#I#0" FromNode="1" ToNode="7" FromLabel="Output" ToLabel="Collective" />
+		<Edge FromPort="7#O#0" ToPort="3#I#0" FromNode="7" ToNode="3" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="5#O#0" ToPort="13#I#0" FromNode="5" ToNode="13" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="6#O#0" ToPort="11#I#0" FromNode="6" ToNode="11" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
+		<Edge FromPort="12#O#0" ToPort="2#I#0" FromNode="12" ToNode="2" FromLabel="Entities" ToLabel="Impulse Port 1" />
+		<Edge FromPort="13#O#0" ToPort="9#I#0" FromNode="13" ToNode="9" FromLabel="Mesh Selection[0].Direction.Output" ToLabel="Input" />
+		<Edge FromPort="9#O#0" ToPort="10#I#0" FromNode="9" ToNode="10" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="13#O#1" ToPort="14#I#0" FromNode="13" ToNode="14" FromLabel="Mesh Selection[1].Direction.Output" ToLabel="Input" />
+		<Edge FromPort="14#O#0" ToPort="10#I#0" FromNode="14" ToNode="10" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="8#O#0" ToPort="10#I#0" FromNode="8" ToNode="10" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="10#O#0" ToPort="6#I#0" FromNode="10" ToNode="6" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="11#O#0" ToPort="15#I#0" FromNode="11" ToNode="15" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="16#O#0" ToPort="8#I#0" FromNode="16" ToNode="8" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="3#O#0" ToPort="16#I#1" FromNode="3" ToNode="16" FromLabel="Output" ToLabel="Input*" />
+		<Edge FromPort="4#O#0" ToPort="16#I#0" FromNode="4" ToNode="16" FromLabel="Output" ToLabel="Input" />
+	</Edges>
+</Graph>

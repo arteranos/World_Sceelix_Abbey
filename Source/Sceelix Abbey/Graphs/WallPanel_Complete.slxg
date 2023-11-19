@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Graph Guid="c9e77385-a12c-4b61-8fdf-3af0e0d4a367" Author="carsten" Description="A standard graph procedure." Color="ffffff" Version="0.8.7.0">
+	<Parameters />
+	<Nodes>
+		<Node Guid="45bce821-dcae-44b1-9031-bd356593bfd5" NodeType="ComponentNode" NodeTypeGUID="0d9e8258-2954-4c6f-9b27-393e084b9d9b" Position="11.60214 868.441" DisableInSubgraphs="True" RelativePath="Graphs/WallPanel_Upper.slxg">
+			<Arguments />
+			<InputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Input" />
+			</InputPorts>
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="13021727-2979-4036-907b-b5092bdc4122" NodeType="SystemNode" NodeTypeGUID="930eb356-619d-4db7-b68a-016d9a6d1e97" Position="11.37118 1020.291" DisableInSubgraphs="True" ProcedureType="ActorTranslateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Translate">
+							<Fields>
+								<Field FixedValue="0,3.75,0" Label="Amount" />
+								<Field FixedValue="Scope" Label="Relative To" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="87daaf2d-5f12-4d9f-89ad-0266d79b29cc" NodeType="SystemNode" NodeTypeGUID="266f147e-064f-44dc-8a38-5c9b7dacca74" Position="-259.2187 1288.293" DisableInSubgraphs="True" ProcedureType="MeshMergeProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Input">
+					<Items>
+						<Item Expanded="True" Label="Collective">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Criteria">
+					<Items />
+				</Argument>
+				<Argument FixedValue="First" Label="Scope Selection" />
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Output" />
+			</OutputPorts>
+		</Node>
+		<Node Guid="579b080e-821d-4a1e-83fa-f834ed6150b0" NodeType="SystemNode" NodeTypeGUID="2ef7c2e5-c59f-464b-8557-c1e4e38216a9" Position="-291.626 438.5838" DisableInSubgraphs="True" ProcedureType="EntityCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Method">
+					<Items>
+						<Item Expanded="True" Label="List">
+							<Fields>
+								<Field FixedValue="System.Object" Label="List" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="[]" Type="ArrayExpressionNode">
+											<ExprNode Name="Int32" Type="ConstantExpressionNode">0</ExprNode>
+										</ExprNode>
+									</ParsedExpression>
+								</Field>
+								<Field FixedValue="Filled" Label="Item" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Standard">
+							<Fields>
+								<Field FixedValue="1" Label="Count" />
+								<Field FixedValue="Filled" Label="Index" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="5571634b-b0fe-40d4-8481-1a06af85b4b6" NodeType="ComponentNode" NodeTypeGUID="092a7c0c-3cbc-485b-9a65-55680ec9fd74" Position="-437.6475 908.5253" DisableInSubgraphs="True" RelativePath="Graphs/WallPanel_Lower.Conditional.slxg">
+			<Arguments />
+			<InputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Input" />
+			</InputPorts>
+			<OutputPorts Count="1" />
+		</Node>
+	</Nodes>
+	<Edges>
+		<Edge FromPort="0#O#0" ToPort="1#I#0" FromNode="0" ToNode="1" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="1#O#0" ToPort="2#I#0" FromNode="1" ToNode="2" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
+		<Edge FromPort="3#O#0" ToPort="0#I#0" FromNode="3" ToNode="0" FromLabel="Entities" ToLabel="Impulse Port 1" />
+		<Edge FromPort="3#O#0" ToPort="4#I#0" FromNode="3" ToNode="4" FromLabel="Entities" ToLabel="Input" />
+		<Edge FromPort="4#O#0" ToPort="2#I#0" FromNode="4" ToNode="2" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
+	</Edges>
+</Graph>

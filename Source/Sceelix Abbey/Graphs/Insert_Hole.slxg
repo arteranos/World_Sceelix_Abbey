@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Graph Guid="5a6ed8d6-a34b-4b79-a2bb-2f02aa5e0c7c" Author="carsten" Description="Uses a modified mesh clip to make a hole in a mesh, splitting it in two to avoid closed loop bugs." Color="ffffff" Version="0.8.7.0">
+	<Parameters />
+	<Nodes>
+		<Node Guid="fda196c6-9334-4284-bc2c-527e8f1efcfc" NodeType="SystemNode" NodeTypeGUID="09b038d3-ee37-4e0b-9091-9aff6f690ce6" Position="-76.54657 1112.049" DisableInSubgraphs="True" ProcedureType="MeshClipProcedure">
+			<Arguments>
+				<Argument FixedValue="Difference" Label="Operation" />
+			</Arguments>
+			<InputPorts Count="2" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="21594ff6-51b9-46dd-ba78-be1c1fde9da9" NodeType="SystemNode" NodeTypeGUID="ce1b6db6-6365-4221-acb2-d2fef8a29ccb" Position="-340.354 889.7169" DisableInSubgraphs="True" ProcedureType="MeshSplitProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Split Axis">
+					<Items>
+						<Item Expanded="True" Label="Scope Axis">
+							<Fields>
+								<Field FixedValue="X" Label="Axis" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Slices">
+					<Items>
+						<Item Expanded="True" Label="Repetitive Slice">
+							<Items>
+								<Item Expanded="True" Label="Slice">
+									<Fields>
+										<Field FixedValue="0.5" Label="Size" />
+										<Field FixedValue="Relative" Label="Sizing" />
+										<Field FixedValue="True" Label="Flexible" />
+										<Field FixedValue="False" Label="Cap" />
+									</Fields>
+								</Item>
+							</Items>
+						</Item>
+					</Items>
+				</Argument>
+				<Argument FixedValue="side" Label="Index" />
+			</Arguments>
+			<InputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Input" />
+			</InputPorts>
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="74510138-e522-4d8e-925a-c4785d41e6c7" NodeType="SystemNode" NodeTypeGUID="50c9a7c0-6f52-470d-8bb7-2c8b663c94b8" Position="-27.93347 901.584" DisableInSubgraphs="True" ProcedureType="CopyProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Standard">
+							<Fields>
+								<Field FixedValue="2" Label="Number of Copies" />
+								<Field FixedValue="Clone" Label="Method" />
+								<Field FixedValue="" Label="Index" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Input*" />
+			</InputPorts>
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="0d6759df-4ea7-412e-b850-210d518df2e4" NodeType="SystemNode" NodeTypeGUID="266f147e-064f-44dc-8a38-5c9b7dacca74" Position="-140.2884 1219.203" DisableInSubgraphs="True" ProcedureType="MeshMergeProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Input">
+					<Items>
+						<Item Expanded="True" Label="Collective">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Criteria">
+					<Items />
+				</Argument>
+				<Argument FixedValue="First" Label="Scope Selection" />
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Output" />
+			</OutputPorts>
+		</Node>
+	</Nodes>
+	<Edges>
+		<Edge FromPort="1#O#0" ToPort="0#I#0" FromNode="1" ToNode="0" FromLabel="Slices[0].Repetitive Slice[0].Slice.Output" ToLabel="Source" />
+		<Edge FromPort="2#O#0" ToPort="0#I#1" FromNode="2" ToNode="0" FromLabel="Operation[0].Standard.Output" ToLabel="Target" />
+		<Edge FromPort="0#O#0" ToPort="3#I#0" FromNode="0" ToNode="3" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
+	</Edges>
+</Graph>

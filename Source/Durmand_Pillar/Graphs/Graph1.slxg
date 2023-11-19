@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Graph Guid="24e75263-c754-48de-a989-340980a3a7f5" Author="carsten" Description="A standard graph procedure." Color="ffffff" Version="0.8.7.0">
+	<Parameters />
+	<Nodes>
+		<Node Guid="3072c801-dfce-43ac-b8b8-45b0c23ff959" NodeType="SystemNode" NodeTypeGUID="eba3dca6-953c-4e64-9e1d-cbc934eea38c" Position="373 158" DisableInSubgraphs="True" ProcedureType="UnityEntityCreateProcedure">
+			<Arguments>
+				<Argument FixedValue="Sceelix Game Object" Label="Name" />
+				<Argument FixedValue="True" Label="Enabled" />
+				<Argument FixedValue="True" Label="Static" />
+				<Argument FixedValue="" Label="Layer" />
+				<Argument FixedValue="" Label="Prefab" />
+				<Argument FixedValue="Minimum" Label="Positioning" />
+				<Argument FixedValue="Stretch To Fill" Label="Scale Mode" />
+				<Argument FixedValue="" Label="Tag" />
+				<Argument Expanded="True" Label="Options">
+					<Items>
+						<Item Expanded="True" Label="Simple">
+							<Fields>
+								<Field FixedValue="0,0,0" Label="Translation" />
+								<Field FixedValue="0,0,0" Label="Rotation" />
+								<Field FixedValue="1,1,1" Label="Scale" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="cc5c1895-9127-4752-a2f6-76ba27e9ee1a" NodeType="SystemNode" NodeTypeGUID="f4ddf1f0-64b2-4846-84fd-b919b480c492" Position="388 384" DisableInSubgraphs="True" ProcedureType="UnityEntityComponentProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Components">
+					<Items>
+						<Item Expanded="True" Label="Light">
+							<Fields>
+								<Field FixedValue="Directional" Label="Type" />
+								<Field FixedValue="255,255,255,255" Label="Color" />
+								<Field FixedValue="1" Label="Intensity" />
+								<Field FixedValue="1" Label="Bounce Intensity" />
+								<Field FixedValue="Soft" Label="Shadow Type" />
+								<Field FixedValue="10" Label="Range" />
+								<Field FixedValue="Auto" Label="Render Mode" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="ddbe48fc-9d07-423f-84b7-9fc06bba29b7" NodeType="SystemNode" NodeTypeGUID="fbf27f2b-eee3-4bd6-85e0-f5d616912877" Position="80.78885 213.1259" DisableInSubgraphs="True" ProcedureType="PointsCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Type">
+					<Items>
+						<Item Expanded="True" Label="Grid">
+							<Fields>
+								<Field FixedValue="10" Label="Columns" />
+								<Field FixedValue="10" Label="Rows" />
+								<Field FixedValue="10" Label="Layers" />
+								<Field FixedValue="10,10,10" Label="Spacing" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Simple">
+							<Fields>
+								<Field Expanded="True" Label="Points">
+									<Items>
+										<Item FixedValue="0,0,0" Label="Point" />
+									</Items>
+								</Field>
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="ba20a427-7c7c-4bf0-beb9-c59d9ddb1699" NodeType="SystemNode" NodeTypeGUID="e728b8dd-3ac4-4c29-82dc-eadd39c50b9b" Position="131.5426 391.9147" DisableInSubgraphs="True" ProcedureType="StochasticProcedure">
+			<Arguments>
+				<Argument FixedValue="1000" Label="Seed" />
+				<Argument FixedValue="Absolute" Label="Method" />
+				<Argument Expanded="True" Label="Probabilities">
+					<Items>
+						<Item FixedValue="0.2" Label="Value" />
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="4f3c8f15-7777-4ff1-b2eb-ee14ea9bff06" NodeType="SystemNode" NodeTypeGUID="4c7a38df-e3a0-4a77-abb0-599f275d414c" Position="86.59212 564.7299" DisableInSubgraphs="True" ProcedureType="ActorInsertProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Inputs">
+					<Items>
+						<Item Expanded="True" Label="One to Many">
+							<Fields />
+						</Item>
+						<Item Expanded="True" Label="One to One">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Alignment on X-Axis">
+					<Items>
+						<Item Expanded="True" Label="Center">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Alignment on Y-Axis">
+					<Items>
+						<Item Expanded="True" Label="Center">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Alignment on Z-Axis">
+					<Items>
+						<Item Expanded="True" Label="Center">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="2" />
+			<OutputPorts Count="2">
+				<Port id="1" state="Blocked" />
+			</OutputPorts>
+		</Node>
+		<Node Guid="db38b384-87ba-4d6c-a56b-1e7fcf6ffa87" NodeType="SystemNode" NodeTypeGUID="74716153-9685-4a42-8409-a9c79de5f8c4" Position="-127.3805 376.5474" DisableInSubgraphs="True" ProcedureType="MeshCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Primitive">
+					<Items>
+						<Item Expanded="True" Label="Star">
+							<Fields>
+								<Field FixedValue="5" Label="Points" />
+								<Field FixedValue="2" Label="Radius 1" />
+								<Field FixedValue="1" Label="Radius 2" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Cross">
+							<Fields>
+								<Field FixedValue="5" Label="Width" />
+								<Field FixedValue="5" Label="Height" />
+								<Field FixedValue="3" Label="Body Width" />
+								<Field FixedValue="3" Label="Body Height" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Cube">
+							<Fields>
+								<Field FixedValue="1" Label="Size" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+	</Nodes>
+	<Edges>
+		<Edge FromPort="0#O#0" ToPort="1#I#0" FromNode="0" ToNode="1" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="2#O#0" ToPort="3#I#0" FromNode="2" ToNode="3" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="3#O#0" ToPort="4#I#1" FromNode="3" ToNode="4" FromLabel="Probabilities[0].Value.Probability" ToLabel="Inputs[0].One to Many.Targets" />
+		<Edge FromPort="5#O#0" ToPort="4#I#0" FromNode="5" ToNode="4" FromLabel="Output" ToLabel="Inputs[0].One to Many.Source" />
+	</Edges>
+</Graph>

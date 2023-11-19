@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Graph Guid="81588cee-5b4b-48a7-b449-5f4ab23c215f" Author="carsten" Description="Splits the mesh according to the given parameters and places &quot;fencepost&quot; actors at the seams." Color="ffffff" Version="0.8.7.1">
+	<Parameters>
+		<Parameter Increment="0.1" Label="Size" Type="Sceelix.Core.Parameters.Infos.DoubleParameterInfo, Sceelix.Core, Version=0.8.7.1, Culture=neutral, PublicKeyToken=null" Section="" FixedValue="3" />
+		<Parameter Label="Sizing" Type="Sceelix.Core.Parameters.Infos.ChoiceParameterInfo, Sceelix.Core, Version=0.8.7.1, Culture=neutral, PublicKeyToken=null" Section="" FixedValue="Absolute">
+			<Choices>
+				<Choice>Absolute</Choice>
+				<Choice>Relative</Choice>
+			</Choices>
+		</Parameter>
+		<Parameter Label="Axis" Type="Sceelix.Core.Parameters.Infos.ChoiceParameterInfo, Sceelix.Core, Version=0.8.7.1, Culture=neutral, PublicKeyToken=null" Section="" FixedValue="X">
+			<Choices>
+				<Choice>X</Choice>
+				<Choice>Y</Choice>
+				<Choice>Z</Choice>
+			</Choices>
+		</Parameter>
+	</Parameters>
+	<Nodes>
+		<Node Guid="011d5aed-595d-44b5-bf7f-1ce8f077c4f3" NodeType="SystemNode" NodeTypeGUID="74716153-9685-4a42-8409-a9c79de5f8c4" Position="374.8705 88.48264" DisableInSubgraphs="True" ProcedureType="MeshCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Primitive">
+					<Items>
+						<Item Expanded="True" Label="Rectangle">
+							<Fields>
+								<Field FixedValue="30" Label="Width" />
+								<Field FixedValue="1" Label="Height" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Cube">
+							<Fields>
+								<Field FixedValue="1" Label="Size" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="5edc3ed1-de5b-46b2-8578-a59077993ad0" NodeType="SystemNode" NodeTypeGUID="ce1b6db6-6365-4221-acb2-d2fef8a29ccb" Position="256.9388 501.8263" DisableInSubgraphs="True" ProcedureType="MeshSplitProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Split Axis">
+					<Items>
+						<Item Expanded="True" Label="Scope Axis">
+							<Fields>
+								<Field FixedValue="X" Label="Axis" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="Axis" Type="ParameterExpressionNode" />
+									</ParsedExpression>
+								</Field>
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Slices">
+					<Items>
+						<Item Expanded="True" Label="Repetitive Slice">
+							<Items>
+								<Item Expanded="True" Label="Slice">
+									<Fields>
+										<Field FixedValue="0.2" Label="Size" IsExpression="True">
+											<ParsedExpression>
+												<ExprNode Name="Size" Type="ParameterExpressionNode" />
+											</ParsedExpression>
+										</Field>
+										<Field FixedValue="Relative" Label="Sizing" IsExpression="True">
+											<ParsedExpression>
+												<ExprNode Name="Sizing" Type="ParameterExpressionNode" />
+											</ParsedExpression>
+										</Field>
+										<Field FixedValue="True" Label="Flexible" />
+										<Field FixedValue="False" Label="Cap" />
+									</Fields>
+								</Item>
+							</Items>
+						</Item>
+					</Items>
+				</Argument>
+				<Argument FixedValue="" Label="Index" />
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="1e3a6206-a20b-4d33-97f0-993258e0a625" NodeType="SystemNode" NodeTypeGUID="74716153-9685-4a42-8409-a9c79de5f8c4" Position="69.4669 80.61115" DisableInSubgraphs="True" ProcedureType="MeshCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Primitive">
+					<Items>
+						<Item Expanded="True" Label="Cylinder">
+							<Fields>
+								<Field FixedValue="2" Label="Height" />
+								<Field FixedValue="0.2" Label="Radius" />
+								<Field FixedValue="10" Label="Segments" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Cube">
+							<Fields>
+								<Field FixedValue="1" Label="Size" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="3d4b0168-1069-4c81-a511-6ac661040b44" NodeType="SystemNode" NodeTypeGUID="4c7a38df-e3a0-4a77-abb0-599f275d414c" Position="52.84639 634.5071" DisableInSubgraphs="True" ProcedureType="ActorInsertProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Inputs">
+					<Items>
+						<Item Expanded="True" Label="One to Many">
+							<Fields />
+						</Item>
+						<Item Expanded="True" Label="Many to Many">
+							<Fields />
+						</Item>
+						<Item Expanded="True" Label="One to One">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Alignment on X-Axis">
+					<Items>
+						<Item Expanded="True" Label="Custom">
+							<Fields>
+								<Field FixedValue="-0.5" Label="Source" />
+								<Field FixedValue="0" Label="Target" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="IfBool" Type="DirectFunctionExpressionNode">
+											<ExprNode Name="==" Type="BinaryExpressionNode">
+												<ExprNode Name="Axis" Type="ParameterExpressionNode" />
+												<ExprNode Name="String" Type="StringExpressionNode">X</ExprNode>
+											</ExprNode>
+											<ExprNode Name="Int32" Type="ConstantExpressionNode">1</ExprNode>
+											<ExprNode Name="Double" Type="DoubleExpressionNode">0.5</ExprNode>
+										</ExprNode>
+									</ParsedExpression>
+								</Field>
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Center">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Alignment on Y-Axis">
+					<Items>
+						<Item Expanded="True" Label="Custom">
+							<Fields>
+								<Field FixedValue="-0.5" Label="Source" />
+								<Field FixedValue="0.5" Label="Target" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="IfBool" Type="DirectFunctionExpressionNode">
+											<ExprNode Name="==" Type="BinaryExpressionNode">
+												<ExprNode Name="Axis" Type="ParameterExpressionNode" />
+												<ExprNode Name="String" Type="StringExpressionNode">Y</ExprNode>
+											</ExprNode>
+											<ExprNode Name="Int32" Type="ConstantExpressionNode">1</ExprNode>
+											<ExprNode Name="Double" Type="DoubleExpressionNode">0.5</ExprNode>
+										</ExprNode>
+									</ParsedExpression>
+								</Field>
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Center">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Alignment on Z-Axis">
+					<Items>
+						<Item Expanded="True" Label="Custom">
+							<Fields>
+								<Field FixedValue="-0.5" Label="Source" />
+								<Field FixedValue="0.5" Label="Target" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="IfBool" Type="DirectFunctionExpressionNode">
+											<ExprNode Name="==" Type="BinaryExpressionNode">
+												<ExprNode Name="Axis" Type="ParameterExpressionNode" />
+												<ExprNode Name="String" Type="StringExpressionNode">Z</ExprNode>
+											</ExprNode>
+											<ExprNode Name="Int32" Type="ConstantExpressionNode">1</ExprNode>
+											<ExprNode Name="Double" Type="DoubleExpressionNode">0.5</ExprNode>
+										</ExprNode>
+									</ParsedExpression>
+								</Field>
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Center">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="2">
+				<Port id="0" state="Gate" GateLabel="FencePost" />
+			</InputPorts>
+			<OutputPorts Count="2">
+				<Port id="0" state="Gate" GateLabel="FenceOutput" />
+				<Port id="1" state="Gate" GateLabel="Fence_Split" />
+			</OutputPorts>
+		</Node>
+		<Node Guid="282904d0-b506-469f-9917-fce49289224e" NodeType="SystemNode" NodeTypeGUID="4c7a38df-e3a0-4a77-abb0-599f275d414c" Position="477.3769 644.8391" DisableInSubgraphs="True" ProcedureType="ActorInsertProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Inputs">
+					<Items>
+						<Item Expanded="True" Label="One to Many">
+							<Fields />
+						</Item>
+						<Item Expanded="True" Label="One to One">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Alignment on X-Axis">
+					<Items>
+						<Item Expanded="True" Label="Custom">
+							<Fields>
+								<Field FixedValue="-0.5" Label="Source" />
+								<Field FixedValue="0" Label="Target" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="IfBool" Type="DirectFunctionExpressionNode">
+											<ExprNode Name="==" Type="BinaryExpressionNode">
+												<ExprNode Name="Axis" Type="ParameterExpressionNode" />
+												<ExprNode Name="String" Type="StringExpressionNode">X</ExprNode>
+											</ExprNode>
+											<ExprNode Name="Int32" Type="ConstantExpressionNode">0</ExprNode>
+											<ExprNode Name="Double" Type="DoubleExpressionNode">0.5</ExprNode>
+										</ExprNode>
+									</ParsedExpression>
+								</Field>
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Center">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Alignment on Y-Axis">
+					<Items>
+						<Item Expanded="True" Label="Custom">
+							<Fields>
+								<Field FixedValue="-0.5" Label="Source" />
+								<Field FixedValue="1" Label="Target" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="IfBool" Type="DirectFunctionExpressionNode">
+											<ExprNode Name="==" Type="BinaryExpressionNode">
+												<ExprNode Name="Axis" Type="ParameterExpressionNode" />
+												<ExprNode Name="String" Type="StringExpressionNode">Y</ExprNode>
+											</ExprNode>
+											<ExprNode Name="Int32" Type="ConstantExpressionNode">0</ExprNode>
+											<ExprNode Name="Double" Type="DoubleExpressionNode">0.5</ExprNode>
+										</ExprNode>
+									</ParsedExpression>
+								</Field>
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Center">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+				<Argument Expanded="True" Label="Alignment on Z-Axis">
+					<Items>
+						<Item Expanded="True" Label="Custom">
+							<Fields>
+								<Field FixedValue="-0.5" Label="Source" />
+								<Field FixedValue="1" Label="Target" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="IfBool" Type="DirectFunctionExpressionNode">
+											<ExprNode Name="==" Type="BinaryExpressionNode">
+												<ExprNode Name="Axis" Type="ParameterExpressionNode" />
+												<ExprNode Name="String" Type="StringExpressionNode">Z</ExprNode>
+											</ExprNode>
+											<ExprNode Name="Int32" Type="ConstantExpressionNode">0</ExprNode>
+											<ExprNode Name="Double" Type="DoubleExpressionNode">0.5</ExprNode>
+										</ExprNode>
+									</ParsedExpression>
+								</Field>
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Center">
+							<Fields />
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="2">
+				<Port id="0" state="Gate" GateLabel="FencePost" />
+			</InputPorts>
+			<OutputPorts Count="2">
+				<Port id="0" state="Gate" GateLabel="FenceOutput" />
+				<Port id="1" state="Blocked" />
+			</OutputPorts>
+		</Node>
+		<Node Guid="49ee6d09-d3a1-4df9-af15-bc6843e6978e" NodeType="SystemNode" NodeTypeGUID="74716153-9685-4a42-8409-a9c79de5f8c4" Position="746 209" DisableInSubgraphs="True" ProcedureType="MeshCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Primitive">
+					<Items>
+						<Item Expanded="True" Label="Cube">
+							<Fields>
+								<Field FixedValue="30" Label="Size" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="98c58032-eb18-4617-aed2-e98b1fada43c" NodeType="SystemNode" NodeTypeGUID="3f477acc-ff16-4ceb-9f54-0b1404dc149b" Position="540.4063 349.8561" DisableInSubgraphs="True" ProcedureType="CollectionProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Count">
+							<Fields>
+								<Field FixedValue="count" Label="Index" />
+								<Field FixedValue="" Label="Count" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Fence" />
+			</InputPorts>
+			<OutputPorts Count="1" />
+		</Node>
+	</Nodes>
+	<Edges>
+		<Edge FromPort="2#O#0" ToPort="4#I#0" FromNode="2" ToNode="4" FromLabel="Output" ToLabel="Inputs[0].One to Many.Source" />
+		<Edge FromPort="1#O#0" ToPort="3#I#1" FromNode="1" ToNode="3" FromLabel="Slices[0].Repetitive Slice[0].Slice.Output" ToLabel="Inputs[0].One to Many.Targets" />
+		<Edge FromPort="2#O#0" ToPort="3#I#0" FromNode="2" ToNode="3" FromLabel="Output" ToLabel="Inputs[0].One to Many.Source" />
+		<Edge FromPort="0#O#0" ToPort="6#I#0" FromNode="0" ToNode="6" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="5#O#0" ToPort="6#I#0" FromNode="5" ToNode="6" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="6#O#0" ToPort="4#I#1" FromNode="6" ToNode="4" FromLabel="Output" ToLabel="Inputs[0].One to Many.Targets" />
+		<Edge FromPort="6#O#0" ToPort="1#I#0" FromNode="6" ToNode="1" FromLabel="Output" ToLabel="Input" />
+	</Edges>
+</Graph>

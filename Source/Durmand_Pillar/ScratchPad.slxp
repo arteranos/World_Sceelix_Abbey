@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Project>
+  <Author>carsten</Author>
+  <Company>Private</Company>
+  <Version>1.0.0.0</Version>
+  <Items>
+    <Item Path="Graphs" Nature="Folder" Expanded="True">
+      <Item Path="Arch.slxg" Nature="File" Guid="4797c68b-9a33-4a48-8cb3-3c6d192bd491" />
+      <Item Path="Bookcase_Archway.slxg" Nature="File" Guid="9a109407-67d0-43e3-ae71-64ed9a79a841" />
+      <Item Path="DurmandPillar.slxg" Nature="File" Guid="626ce663-1b90-4e24-9b87-102e653a4249" />
+      <Item Path="Graph1.slxg" Nature="File" Guid="24e75263-c754-48de-a989-340980a3a7f5" />
+      <Item Path="Graph2.slxg" Nature="File" Guid="0b9d0b21-6fbc-4302-b82c-72058665615f" />
+      <Item Path="Prototype_Corridor.slxg" Nature="File" Guid="c051118c-7198-409b-b3c1-527b06214372" />
+      <Item Path="Scroll_Case_Inner.slxg" Nature="File" Guid="324f7b30-024f-4a77-9ccb-66013673ac40" />
+      <Item Path="Scroll_Case_Wall_Element.slxg" Nature="File" Guid="1a0145db-297b-4766-8577-2d59678fc90d" />
+      <Item Path="Scroll_Line.slxg" Nature="File" Guid="164aa82f-d9be-4839-9e55-eaa70d533e7a" />
+      <Item Path="Scroll_Pile.slxg" Nature="File" Guid="c2296583-5f24-49fa-aba1-c5f3f1eb9b00" />
+    </Item>
+    <Item Path="Textures" Nature="Folder" Expanded="True">
+      <Item Path="Grid.png" Nature="File" Guid="180d8d52-cac2-409d-9900-b2484823f8ae" />
+      <Item Path="Scripture_Tablet_Albedo.png" Nature="File" Guid="03315a2b-9ccc-4b18-b777-025b97b00a76" />
+      <Item Path="Scripture_Tablet_Normal.png" Nature="File" Guid="d8c2fe34-5f3f-45eb-a0c7-2de37ad656b3" />
+    </Item>
+  </Items>
+</Project>

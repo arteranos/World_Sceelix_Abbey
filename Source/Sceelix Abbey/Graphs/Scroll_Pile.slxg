@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Graph Guid="c2296583-5f24-49fa-aba1-c5f3f1eb9b00" Author="carsten" Description="A standard graph procedure." Color="ffffff" Version="0.8.7.0">
+	<Parameters />
+	<Nodes>
+		<Node Guid="8344731c-f0b6-4668-a090-542c01c53b49" NodeType="ComponentNode" NodeTypeGUID="164aa82f-d9be-4839-9e55-eaa70d533e7a" Position="121.642 254.3968" DisableInSubgraphs="True" RelativePath="Graphs/Scroll_Line.slxg">
+			<Arguments />
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="4b06ba23-8a27-4181-aad6-68dff4cc2171" NodeType="SystemNode" NodeTypeGUID="2ef7c2e5-c59f-464b-8557-c1e4e38216a9" Position="155.7115 48.42918" HasImpulsePort="True" DisableInSubgraphs="True" ProcedureType="EntityCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Method">
+					<Items>
+						<Item Expanded="True" Label="List">
+							<Fields>
+								<Field FixedValue="System.Object" Label="List" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="[]" Type="ArrayExpressionNode">
+											<ExprNode Name="Int32" Type="ConstantExpressionNode">1</ExprNode>
+										</ExprNode>
+									</ParsedExpression>
+								</Field>
+								<Field FixedValue="Line" Label="Item" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Standard">
+							<Fields>
+								<Field FixedValue="1" Label="Count" />
+								<Field FixedValue="" Label="Index" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="15c7d40c-df05-426d-9daf-7175932b3aee" NodeType="SystemNode" NodeTypeGUID="2ef7c2e5-c59f-464b-8557-c1e4e38216a9" Position="174.235 -87.23569" HasImpulsePort="True" ProcedureType="EntityCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Method">
+					<Items>
+						<Item Expanded="True" Label="List">
+							<Fields>
+								<Field FixedValue="System.Object" Label="List" IsExpression="True">
+									<ParsedExpression>
+										<ExprNode Name="[]" Type="ArrayExpressionNode">
+											<ExprNode Name="Int32" Type="ConstantExpressionNode">3</ExprNode>
+										</ExprNode>
+									</ParsedExpression>
+								</Field>
+								<Field FixedValue="LineMask" Label="Item" />
+							</Fields>
+						</Item>
+						<Item Expanded="True" Label="Standard">
+							<Fields>
+								<Field FixedValue="1" Label="Count" />
+								<Field FixedValue="" Label="Index" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Impulse Port 1" />
+			</InputPorts>
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="39f1eef4-4a94-4cac-bcd3-aa2a9df917cd" NodeType="SystemNode" NodeTypeGUID="8c5f1758-7567-41ef-9089-2e033169567d" Position="71.61078 387.1607" DisableInSubgraphs="True" ProcedureType="ConditionalProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Check">
+					<Items>
+						<Item Expanded="True" Label="If...Else">
+							<Fields>
+								<Field Expanded="True" Label="Conditions">
+									<Items>
+										<Item FixedValue="False" Label="If" IsExpression="True">
+											<ParsedExpression>
+												<ExprNode Name="==" Type="BinaryExpressionNode">
+													<ExprNode Name="Line" Type="AttributeExpressionNode" AllowNull="False" />
+													<ExprNode Name="Int32" Type="ConstantExpressionNode">5</ExprNode>
+												</ExprNode>
+											</ParsedExpression>
+										</Item>
+									</Items>
+								</Field>
+								<Field Expanded="True" Label="Else">
+									<Fields />
+								</Field>
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="2">
+				<Port id="0" state="Blocked" />
+			</OutputPorts>
+		</Node>
+		<Node Guid="288c2d45-80ac-45d6-bb65-ae2f7b1a1abe" NodeType="SystemNode" NodeTypeGUID="2ef7c2e5-c59f-464b-8557-c1e4e38216a9" Position="512.3375 116.4072" HasImpulsePort="True" DisableInSubgraphs="True" ProcedureType="EntityCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Method">
+					<Items>
+						<Item Expanded="True" Label="Standard">
+							<Fields>
+								<Field FixedValue="1" Label="Count" />
+								<Field FixedValue="" Label="Index" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
+		<Node Guid="2ef6acae-0934-48b1-baa7-83d70fb04d4c" NodeType="SystemNode" NodeTypeGUID="8906cb79-297a-40a5-8e36-b5f12ddbb847" Position="110.884 660.1371" DisableInSubgraphs="True" ProcedureType="ActorRotateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Operation">
+					<Items>
+						<Item Expanded="True" Label="Rotate">
+							<Fields>
+								<Field FixedValue="0" Label="Angle" />
+								<Field Expanded="True" Label="Axis">
+									<Fields>
+										<Field FixedValue="0,1,0" Label="Direction" />
+										<Field FixedValue="World" Label="Relative To" />
+									</Fields>
+								</Field>
+								<Field Expanded="True" Label="Pivot">
+									<Fields>
+										<Field FixedValue="0.5,0.5,0" Label="Position" />
+										<Field FixedValue="Relative" Label="Offset" />
+										<Field FixedValue="World" Label="Relative To" />
+									</Fields>
+								</Field>
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1">
+				<Port id="0" state="Gate" GateLabel="Output" />
+			</OutputPorts>
+		</Node>
+		<Node Guid="d8763d95-8825-4724-a9fc-81d0d273c88c" NodeType="SystemNode" NodeTypeGUID="2ef7c2e5-c59f-464b-8557-c1e4e38216a9" Position="189.9554 -265.4858" DisableInSubgraphs="True" ProcedureType="EntityCreateProcedure">
+			<Arguments>
+				<Argument Expanded="True" Label="Method">
+					<Items>
+						<Item Expanded="True" Label="Standard">
+							<Fields>
+								<Field FixedValue="1" Label="Count" />
+								<Field FixedValue="" Label="Index" />
+							</Fields>
+						</Item>
+					</Items>
+				</Argument>
+			</Arguments>
+			<InputPorts Count="0" />
+			<OutputPorts Count="1" />
+		</Node>
+	</Nodes>
+	<Edges>
+		<Edge FromPort="2#O#0" ToPort="1#I#0" FromNode="2" ToNode="1" FromLabel="Entities" ToLabel="Impulse Port 1" />
+		<Edge FromPort="1#O#0" ToPort="0#I#0" FromNode="1" ToNode="0" FromLabel="Entities" ToLabel="line &amp; lineMask" />
+		<Edge FromPort="0#O#0" ToPort="3#I#0" FromNode="0" ToNode="3" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="3#O#1" ToPort="4#I#0" FromNode="3" ToNode="4" FromLabel="Check[0].If...Else.Else.Else" ToLabel="Impulse Port 1" />
+		<Edge FromPort="4#O#0" ToPort="0#I#0" FromNode="4" ToNode="0" FromLabel="Entities" ToLabel="line &amp; lineMask" />
+		<Edge FromPort="3#O#1" ToPort="5#I#0" FromNode="3" ToNode="5" FromLabel="Check[0].If...Else.Else.Else" ToLabel="Input" />
+		<Edge FromPort="6#O#0" ToPort="2#I#0" FromNode="6" ToNode="2" FromLabel="Entities" ToLabel="Impulse Port 1" />
+	</Edges>
+</Graph>
