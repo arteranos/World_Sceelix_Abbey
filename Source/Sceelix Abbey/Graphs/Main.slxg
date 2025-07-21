@@ -514,7 +514,7 @@
 			<InputPorts Count="1" />
 			<OutputPorts Count="1" />
 		</Node>
-		<Node Guid="5962752c-e9c3-4c1e-8afd-12663cd10d8e" NodeType="SystemNode" NodeTypeGUID="ab33c263-352e-4917-a7ec-0686aebc078b" Position="867.3268 1627.689" DisableInSubgraphs="True" ProcedureType="MeshMaterialProcedure">
+		<Node Guid="5962752c-e9c3-4c1e-8afd-12663cd10d8e" NodeType="SystemNode" NodeTypeGUID="ab33c263-352e-4917-a7ec-0686aebc078b" Position="817.5005 1552.95" DisableInSubgraphs="True" ProcedureType="MeshMaterialProcedure">
 			<Arguments>
 				<Argument Expanded="True" Label="Material">
 					<Items>
@@ -531,23 +531,6 @@
 						</Item>
 					</Items>
 				</Argument>
-			</Arguments>
-			<InputPorts Count="1" />
-			<OutputPorts Count="1" />
-		</Node>
-		<Node Guid="49a43dac-5cfe-4459-a6a7-99ce03b0772f" NodeType="SystemNode" NodeTypeGUID="266f147e-064f-44dc-8a38-5c9b7dacca74" Position="13.73544 2233.566" DisableInSubgraphs="True" ProcedureType="MeshMergeProcedure">
-			<Arguments>
-				<Argument Expanded="True" Label="Input">
-					<Items>
-						<Item Expanded="True" Label="Collective">
-							<Fields />
-						</Item>
-					</Items>
-				</Argument>
-				<Argument Expanded="True" Label="Criteria">
-					<Items />
-				</Argument>
-				<Argument FixedValue="First" Label="Scope Selection" />
 			</Arguments>
 			<InputPorts Count="1" />
 			<OutputPorts Count="1" />
@@ -845,6 +828,20 @@
 			<InputPorts Count="2" />
 			<OutputPorts Count="1" />
 		</Node>
+		<Node Guid="cd358af7-25d9-4fc3-a0d8-f27db90b871e" NodeType="SystemNode" NodeTypeGUID="0DABC5F2-C6EE-40E6-9576-14F9D48BAA84" Position="-337.9521 2273.645" DisableInSubgraphs="True" ProcedureType="UnityEntityGroupCreateProcedure">
+			<Arguments>
+				<Argument FixedValue="Model" Label="Name" />
+				<Argument FixedValue="True" Label="Enabled" />
+				<Argument FixedValue="True" Label="Static" />
+				<Argument FixedValue="" Label="Layer" />
+				<Argument FixedValue="" Label="Prefab" />
+				<Argument FixedValue="Minimum" Label="Positioning" />
+				<Argument FixedValue="Stretch To Fill" Label="Scale Mode" />
+				<Argument FixedValue="" Label="Tag" />
+			</Arguments>
+			<InputPorts Count="1" />
+			<OutputPorts Count="1" />
+		</Node>
 	</Nodes>
 	<Edges>
 		<Edge FromPort="0#O#0" ToPort="1#I#0" FromNode="0" ToNode="1" FromLabel="Output" ToLabel="Input" />
@@ -864,41 +861,41 @@
 		<Edge FromPort="7#O#3" ToPort="13#I#0" FromNode="7" ToNode="13" FromLabel="Mesh Selection[3].Direction.Output" ToLabel="Input" />
 		<Edge FromPort="2#O#2" ToPort="13#I#0" FromNode="2" ToNode="13" FromLabel="Mesh Selection[2].Direction.Output" ToLabel="Input" />
 		<Edge FromPort="13#O#0" ToPort="14#I#0" FromNode="13" ToNode="14" FromLabel="Output" ToLabel="Input" />
-		<Edge FromPort="11#O#0" ToPort="15#I#0" FromNode="11" ToNode="15" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="14#O#0" ToPort="15#I#0" FromNode="14" ToNode="15" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="7#O#1" ToPort="16#I#0" FromNode="7" ToNode="16" FromLabel="Mesh Selection[1].Direction.Output" ToLabel="Target" />
-		<Edge FromPort="16#O#0" ToPort="15#I#0" FromNode="16" ToNode="15" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="7#O#2" ToPort="19#I#0" FromNode="7" ToNode="19" FromLabel="Mesh Selection[2].Direction.Output" ToLabel="Input" />
-		<Edge FromPort="18#O#0" ToPort="17#I#1" FromNode="18" ToNode="17" FromLabel="Output" ToLabel="Fence" />
-		<Edge FromPort="5#O#1" ToPort="18#I#0" FromNode="5" ToNode="18" FromLabel="Slices[1].Slice.Output" ToLabel="Input" />
+		<Edge FromPort="7#O#1" ToPort="15#I#0" FromNode="7" ToNode="15" FromLabel="Mesh Selection[1].Direction.Output" ToLabel="Target" />
+		<Edge FromPort="7#O#2" ToPort="18#I#0" FromNode="7" ToNode="18" FromLabel="Mesh Selection[2].Direction.Output" ToLabel="Input" />
+		<Edge FromPort="17#O#0" ToPort="16#I#1" FromNode="17" ToNode="16" FromLabel="Output" ToLabel="Fence" />
+		<Edge FromPort="5#O#1" ToPort="17#I#0" FromNode="5" ToNode="17" FromLabel="Slices[1].Slice.Output" ToLabel="Input" />
 		<Edge FromPort="7#O#1" ToPort="5#I#0" FromNode="7" ToNode="5" FromLabel="Mesh Selection[1].Direction.Output" ToLabel="Input" />
-		<Edge FromPort="17#O#0" ToPort="20#I#0" FromNode="17" ToNode="20" FromLabel="FenceOutput" ToLabel="Collective" />
-		<Edge FromPort="20#O#0" ToPort="15#I#0" FromNode="20" ToNode="15" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="21#O#0" ToPort="15#I#0" FromNode="21" ToNode="15" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="17#O#1" ToPort="21#I#0" FromNode="17" ToNode="21" FromLabel="Fence_Split" ToLabel="Input" />
-		<Edge FromPort="7#O#0" ToPort="22#I#0" FromNode="7" ToNode="22" FromLabel="Mesh Selection[0].Direction.Output" ToLabel="Input" />
-		<Edge FromPort="19#O#0" ToPort="22#I#0" FromNode="19" ToNode="22" FromLabel="Output" ToLabel="Input" />
-		<Edge FromPort="22#O#0" ToPort="23#I#1" FromNode="22" ToNode="23" FromLabel="Slices[0].Slice.Output" ToLabel="Fence" />
-		<Edge FromPort="23#O#0" ToPort="24#I#0" FromNode="23" ToNode="24" FromLabel="FenceOutput" ToLabel="Collective" />
-		<Edge FromPort="24#O#0" ToPort="25#I#0" FromNode="24" ToNode="25" FromLabel="Output" ToLabel="Input" />
-		<Edge FromPort="23#O#1" ToPort="26#I#0" FromNode="23" ToNode="26" FromLabel="Fence_Split" ToLabel="Impulse Port 1" />
-		<Edge FromPort="25#O#0" ToPort="15#I#0" FromNode="25" ToNode="15" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="26#O#0" ToPort="27#I#0" FromNode="26" ToNode="27" FromLabel="Output" ToLabel="Inputs[0].One to One.Source" />
-		<Edge FromPort="23#O#1" ToPort="27#I#1" FromNode="23" ToNode="27" FromLabel="Fence_Split" ToLabel="Inputs[0].One to One.Target" />
-		<Edge FromPort="27#O#0" ToPort="28#I#0" FromNode="27" ToNode="28" FromLabel="Source" ToLabel="Input" />
-		<Edge FromPort="28#O#0" ToPort="15#I#0" FromNode="28" ToNode="15" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="29#O#1" ToPort="15#I#0" FromNode="29" ToNode="15" FromLabel="Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="22#O#1" ToPort="29#I#0" FromNode="22" ToNode="29" FromLabel="Slices[1].Slice.Output" ToLabel="Input" />
-		<Edge FromPort="29#O#0" ToPort="13#I#0" FromNode="29" ToNode="13" FromLabel="Floor" ToLabel="Input" />
-		<Edge FromPort="30#O#0" ToPort="17#I#0" FromNode="30" ToNode="17" FromLabel="Output" ToLabel="FencePost" />
-		<Edge FromPort="30#O#0" ToPort="23#I#0" FromNode="30" ToNode="23" FromLabel="Output" ToLabel="FencePost" />
-		<Edge FromPort="4#O#0" ToPort="31#I#0" FromNode="4" ToNode="31" FromLabel="Check[0].If...Else.Conditions[0].If.If" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="2#O#2" ToPort="31#I#0" FromNode="2" ToNode="31" FromLabel="Mesh Selection[2].Direction.Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="7#O#3" ToPort="31#I#0" FromNode="7" ToNode="31" FromLabel="Mesh Selection[3].Direction.Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="29#O#0" ToPort="31#I#0" FromNode="29" ToNode="31" FromLabel="Floor" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="7#O#1" ToPort="31#I#0" FromNode="7" ToNode="31" FromLabel="Mesh Selection[1].Direction.Output" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="29#O#2" ToPort="31#I#0" FromNode="29" ToNode="31" FromLabel="Wall_Mesh" ToLabel="Input[0].Collective.Collective" />
-		<Edge FromPort="32#O#0" ToPort="33#I#0" FromNode="32" ToNode="33" FromLabel="Output" ToLabel="Input" />
-		<Edge FromPort="31#O#0" ToPort="33#I#1" FromNode="31" ToNode="33" FromLabel="Output" ToLabel="Components[0].Mesh Collider.Source[0].Own Mesh.Input" />
+		<Edge FromPort="16#O#0" ToPort="19#I#0" FromNode="16" ToNode="19" FromLabel="FenceOutput" ToLabel="Collective" />
+		<Edge FromPort="16#O#1" ToPort="20#I#0" FromNode="16" ToNode="20" FromLabel="Fence_Split" ToLabel="Input" />
+		<Edge FromPort="7#O#0" ToPort="21#I#0" FromNode="7" ToNode="21" FromLabel="Mesh Selection[0].Direction.Output" ToLabel="Input" />
+		<Edge FromPort="18#O#0" ToPort="21#I#0" FromNode="18" ToNode="21" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="21#O#0" ToPort="22#I#1" FromNode="21" ToNode="22" FromLabel="Slices[0].Slice.Output" ToLabel="Fence" />
+		<Edge FromPort="22#O#0" ToPort="23#I#0" FromNode="22" ToNode="23" FromLabel="FenceOutput" ToLabel="Collective" />
+		<Edge FromPort="23#O#0" ToPort="24#I#0" FromNode="23" ToNode="24" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="22#O#1" ToPort="25#I#0" FromNode="22" ToNode="25" FromLabel="Fence_Split" ToLabel="Impulse Port 1" />
+		<Edge FromPort="25#O#0" ToPort="26#I#0" FromNode="25" ToNode="26" FromLabel="Output" ToLabel="Inputs[0].One to One.Source" />
+		<Edge FromPort="22#O#1" ToPort="26#I#1" FromNode="22" ToNode="26" FromLabel="Fence_Split" ToLabel="Inputs[0].One to One.Target" />
+		<Edge FromPort="26#O#0" ToPort="27#I#0" FromNode="26" ToNode="27" FromLabel="Source" ToLabel="Input" />
+		<Edge FromPort="21#O#1" ToPort="28#I#0" FromNode="21" ToNode="28" FromLabel="Slices[1].Slice.Output" ToLabel="Input" />
+		<Edge FromPort="28#O#0" ToPort="13#I#0" FromNode="28" ToNode="13" FromLabel="Floor" ToLabel="Input" />
+		<Edge FromPort="29#O#0" ToPort="16#I#0" FromNode="29" ToNode="16" FromLabel="Output" ToLabel="FencePost" />
+		<Edge FromPort="29#O#0" ToPort="22#I#0" FromNode="29" ToNode="22" FromLabel="Output" ToLabel="FencePost" />
+		<Edge FromPort="4#O#0" ToPort="30#I#0" FromNode="4" ToNode="30" FromLabel="Check[0].If...Else.Conditions[0].If.If" ToLabel="Input[0].Collective.Collective" />
+		<Edge FromPort="2#O#2" ToPort="30#I#0" FromNode="2" ToNode="30" FromLabel="Mesh Selection[2].Direction.Output" ToLabel="Input[0].Collective.Collective" />
+		<Edge FromPort="7#O#3" ToPort="30#I#0" FromNode="7" ToNode="30" FromLabel="Mesh Selection[3].Direction.Output" ToLabel="Input[0].Collective.Collective" />
+		<Edge FromPort="28#O#0" ToPort="30#I#0" FromNode="28" ToNode="30" FromLabel="Floor" ToLabel="Input[0].Collective.Collective" />
+		<Edge FromPort="7#O#1" ToPort="30#I#0" FromNode="7" ToNode="30" FromLabel="Mesh Selection[1].Direction.Output" ToLabel="Input[0].Collective.Collective" />
+		<Edge FromPort="28#O#2" ToPort="30#I#0" FromNode="28" ToNode="30" FromLabel="Wall_Mesh" ToLabel="Input[0].Collective.Collective" />
+		<Edge FromPort="31#O#0" ToPort="32#I#0" FromNode="31" ToNode="32" FromLabel="Output" ToLabel="Input" />
+		<Edge FromPort="30#O#0" ToPort="32#I#1" FromNode="30" ToNode="32" FromLabel="Output" ToLabel="Components[0].Mesh Collider.Source[0].Own Mesh.Input" />
+		<Edge FromPort="11#O#0" ToPort="33#I#0" FromNode="11" ToNode="33" FromLabel="Output" ToLabel="Actors" />
+		<Edge FromPort="19#O#0" ToPort="33#I#0" FromNode="19" ToNode="33" FromLabel="Output" ToLabel="Actors" />
+		<Edge FromPort="20#O#0" ToPort="33#I#0" FromNode="20" ToNode="33" FromLabel="Output" ToLabel="Actors" />
+		<Edge FromPort="15#O#0" ToPort="33#I#0" FromNode="15" ToNode="33" FromLabel="Output" ToLabel="Actors" />
+		<Edge FromPort="24#O#0" ToPort="33#I#0" FromNode="24" ToNode="33" FromLabel="Output" ToLabel="Actors" />
+		<Edge FromPort="27#O#0" ToPort="33#I#0" FromNode="27" ToNode="33" FromLabel="Output" ToLabel="Actors" />
+		<Edge FromPort="28#O#1" ToPort="33#I#0" FromNode="28" ToNode="33" FromLabel="Output" ToLabel="Actors" />
+		<Edge FromPort="14#O#0" ToPort="33#I#0" FromNode="14" ToNode="33" FromLabel="Output" ToLabel="Actors" />
 	</Edges>
 </Graph>
