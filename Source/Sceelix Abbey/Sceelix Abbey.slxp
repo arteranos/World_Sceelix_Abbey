@@ -2,9 +2,9 @@
 <Project>
   <Author>carsten</Author>
   <Company>Private</Company>
-  <Version>1.0.0.0</Version>
+  <Version>1.0.0</Version>
   <Items>
-    <Item Path="Graphs" Nature="Folder" Expanded="True">
+    <Item Path="Graphs" Nature="Folder" Guid="428b973b-2154-4498-8005-2c0257a63482" Expanded="True">
       <Item Path="BasicArch.slxg" Nature="File" Guid="5adbf04a-26df-4de0-b3de-b71df91de323" />
       <Item Path="Insert_Hole.slxg" Nature="File" Guid="5a6ed8d6-a34b-4b79-a2bb-2f02aa5e0c7c" />
       <Item Path="Main.MainAisle_UpperWindows.slxg" Nature="File" Guid="09c1a239-d2ec-4d54-b69b-b81dc2955e80" />
@@ -26,7 +26,7 @@
       <Item Path="WallPanel_Lower.slxg" Nature="File" Guid="b83406be-7d81-4e2f-971d-a34ee8af0b63" />
       <Item Path="WallPanel_Upper.slxg" Nature="File" Guid="0d9e8258-2954-4c6f-9b27-393e084b9d9b" />
     </Item>
-    <Item Path="Textures" Nature="Folder" Expanded="False">
+    <Item Path="Textures" Nature="Folder" Guid="b22da080-6d43-4e3b-b354-6a5d64da263f" Expanded="False">
       <Item Path="Granite.png" Nature="File" Guid="fa215690-4d4c-4c80-b889-4b45d9059ba2" />
       <Item Path="Granite_Tiling_Albedo.png" Nature="File" Guid="b1daf782-c8d7-467d-97fe-c266f5503f13" />
       <Item Path="Granite_Tiling_Normal.png" Nature="File" Guid="91594930-694e-4dab-b56b-003173c01f2f" />
